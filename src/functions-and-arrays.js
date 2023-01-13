@@ -118,7 +118,18 @@ console.log(doesWordExist(words, 'hello'));
 
 
 // Iteration #7: Count repetition
-const wordsCount = [
+
+function howManyTimes(words, searchWord) {
+  let count = 0;
+  words.forEach(word => {
+    if (word === searchWord) {
+      count++;
+    }
+  });
+  return count;
+}
+
+const words = [
   'machine',
   'matter',
   'subset',
@@ -132,9 +143,7 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes(array, word) {
-  let count = 0;
-}
+console.log(howManyTimes(words, 'matter')); 
 
 
 
